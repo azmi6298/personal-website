@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Header from "../header/header";
+import Header from "../header/Header";
 import Footer from "../footer/Footer";
 
 function Layout({ children }) {
