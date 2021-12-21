@@ -1,16 +1,36 @@
 import { Link } from "react-scroll";
-import { GiHamburgerMenu } from "react-icons/gi";
-import { useState } from "react";
-import { Transition } from "@headlessui/react";
+import { useState, useEffect } from "react";
+import { useTheme } from "next-themes";
+import { MdDarkMode, MdLightMode } from "react-icons/md";
+
+function ThemeChanger() {
+  const [mounted, setMounted] = useState(false);
+  const { theme, setTheme } = useTheme();
+
+  useEffect(() => setMounted(true), []);
+
+  if (!mounted) return null;
+  return (
+    <div>
+      <a
+        className="text-black text-2xl lg:text-4xl cursor-pointer"
+        onClick={() => {
+          setTheme(theme === "light" ? "dark" : "light");
+        }}
+      >
+        {theme === "light" ? <MdDarkMode /> : <MdLightMode />}
+      </a>
+    </div>
+  );
+}
 
 function Header() {
-  const [isMenuExpanded, setIsMenuExpanded] = useState(false);
   const menus = ["Home", "About", "Blogs"];
   return (
-    <header className="sticky top-0 z-10 w-full text-white ">
-      <nav className="flex items-center justify-between bg-[#181418] px-8 lg:px-[6rem] py-4">
+    <header className="sticky top-0 z-10 min-w-full">
+      <nav className="flex items-center justify-between px-8 lg:px-[6rem] py-4">
         <Link
-          className="text-[25px] lg:text-[50px] font-bold cursor-pointer hover:text-violet-500"
+          className="text-[25px] lg:text-[50px] font-bold cursor-pointer hover:text-violet-600"
           to="home"
           spy={true}
           smooth={true}
@@ -18,16 +38,7 @@ function Header() {
         >
           im.za
         </Link>
-        <button
-          type="button"
-          className="hover:text-violet-500 text-2xl xl:hidden "
-          onClick={() => setIsMenuExpanded(!isMenuExpanded)}
-          aria-controls="mobile menu"
-          aria-expanded="false"
-        >
-          <GiHamburgerMenu />
-        </button>
-        <div className="hidden xl:flex items-center space-x-4 font-semibold text-[25px]">
+        <div className="hidden xl:flex justify-center items-center space-x-8 font-semibold text-[25px]">
           {menus.map((menu, index) => (
             <Link
               key={index}
@@ -42,37 +53,24 @@ function Header() {
             </Link>
           ))}
         </div>
+
+        {ThemeChanger()}
       </nav>
-      <Transition
-        show={isMenuExpanded}
-        enter="transition ease-out duration-100 transform"
-        enterFrom="opacity-0 scale-95"
-        enterTo="opacity-100 scale-100"
-        leave="transition ease-in duration-75 transform"
-        leaveFrom="opacity-100 scale-100"
-        leaveTo="opacity-0 scale-95"
-      >
-        {(ref) => (
-          <div
-            ref={ref}
-            className="xl:hidden id=mobile-menu flex flex-col bg-violet-900 space-y-6 py-6 drop-shadow-2xl"
+      <div className="xl:hidden flex justify-center py-2 bg-slate-200 dark:bg-[#181418]">
+        {menus.map((menu, index) => (
+          <Link
+            key={index}
+            className="cursor-pointer hover:text-violet-500 text-base font-semibold px-8 lg:px-[6rem] z-20"
+            activeClass="underline decoration-2 decoration-violet-500"
+            to={menu.toLowerCase()}
+            spy={true}
+            smooth={true}
+            duration={500}
           >
-            {menus.map((menu, index) => (
-              <Link
-                key={index}
-                className="cursor-pointer hover:text-violet-500 text-xl font-semibold px-8 lg:px-[6rem] z-20"
-                activeClass="lg:underline lg:decoration-4 lg:decoration-violet-500"
-                to={menu.toLowerCase()}
-                spy={true}
-                smooth={true}
-                duration={500}
-              >
-                {menu}
-              </Link>
-            ))}
-          </div>
-        )}
-      </Transition>
+            {menu}
+          </Link>
+        ))}
+      </div>
     </header>
   );
 }

@@ -39,22 +39,20 @@ function RightSection() {
   ];
   return (
     <div className="flex flex-col min-w-full lg:min-w-min lg:px-0 mt-20 lg:mt-0">
-      <hr className="mb-10 border-2 lg:hidden" />
-      <p className="text-white text-2xl mb-8 font-semibold">Work History</p>
+      <hr className="mb-10 border-2 border-gray-900 dark:border-gray-100 lg:hidden" />
+      <p className="text-2xl mb-8 font-semibold underline">Work History</p>
       <div className="flex flex-col">
         {workHistories.map((history, index) => (
           <div
             key={index}
             className="mb-8 flex flex-col lg:grid lg:grid-cols-2 "
           >
-            <p className="text-slate-400 font-semibold text-base lg:text-lg ">
+            <p className="font-semibold text-base lg:text-lg grayed-text">
               {history.period}
             </p>
             <div>
-              <p className="font-bold text-white text-2xl lg:text-3xl">
-                {history.title}
-              </p>
-              <p className="text-slate-400">{history.description}</p>
+              <p className="font-bold text-2xl lg:text-3xl">{history.title}</p>
+              <p className="grayed-text">{history.description}</p>
             </div>
           </div>
         ))}

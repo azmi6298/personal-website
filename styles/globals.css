@@ -2,34 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
-body {
-  padding: 0;
-  margin: 0;
-  /* font-family: -apple-system, "Inter", BlinkMacSystemFont, Segoe UI, Roboto,
-    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
-  background-color: #181418;
+@layer base {
+  body,
+  nav {
+    @apply bg-slate-200 text-gray-900 dark:bg-[#181418] dark:text-gray-100;
+  }
+
+  header,
+  span,
+  svg,
+  p,
+  ul,
+  a {
+    @apply text-gray-900 dark:text-gray-100;
+  }
+
+  footer {
+    @apply flex flex-col min-h-min bg-violet-800 items-center py-4 lg:py-8 bottom-0 z-10 w-full text-gray-100 !important;
+  }
 }
 
-* {
-  box-sizing: border-box;
-}
+@layer components {
+  .hero-title {
+    @apply text-[3rem] md:text-[7rem] font-bold;
+  }
 
-.hero-title,
-.ti-cursor {
-  font-size: 7rem;
-  font-weight: bold;
-}
-
-.hero-title {
-  filter: drop-shadow(0 20px 13px rgba(108, 71, 195, 0.4))
-    drop-shadow(0 8px 5px rgba(224, 24, 255, 0.502));
-}
-
-@media screen and (max-width: 768px) {
-  .hero-title,
   .ti-cursor {
-    font-size: 3rem;
-    font-weight: bold;
+    @apply text-[7rem] font-bold;
+  }
+
+  .grayed-text {
+    @apply dark:text-slate-400 !important;
+  }
+
+  .light-text {
+    @apply text-gray-100 !important;
   }
 }

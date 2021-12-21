@@ -1,5 +1,5 @@
 function formatDate(date) {
-  return new Date(date).toLocaleString("id", {
+  return new Date(date).toLocaleString("en", {
     year: "numeric",
     month: "long",
     day: "numeric",
@@ -13,11 +13,11 @@ function BlogCard({ data }) {
         href={data.link}
         target="_blank"
         rel="noreferrer"
-        className="text-2xl lg:text-4xl font-semibold"
+        className="text-2xl lg:text-4xl font-semibold hover:text-violet-600"
       >
         {data.title}
       </a>
-      <p className="text-sm lg:text-2xl text-slate-400">
+      <p className="text-sm lg:text-2xl grayed-text">
         {formatDate(data.pubDate)}
       </p>
     </div>

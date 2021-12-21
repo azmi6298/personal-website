@@ -9,7 +9,7 @@ function MovingTitle() {
           .type("Hi, I'm Imza")
           .pause(500)
           .delete(4)
-          .pause(1000)
+          .pause(750)
           .type("Azmi!")
           .pause(2000);
         return instance;

@@ -5,7 +5,7 @@ import { Element } from "react-scroll";
 
 function Home({ blogs }) {
   return (
-    <div className="text-white px-10">
+    <div className="px-10">
       <Element name="home">
         <Hero />
       </Element>
