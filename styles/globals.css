@@ -39,4 +39,8 @@
   .light-text {
     @apply text-gray-100 !important;
   }
+
+  .section-title {
+    @apply text-4xl lg:text-[4rem] font-bold underline lg:no-underline;
+  }
 }

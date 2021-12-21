@@ -57,6 +57,15 @@ function RightSection() {
           </div>
         ))}
       </div>
+      <a
+        href="CV-Muhammad-Azmi-December-2021.pdf"
+        alt="Muhammad Azmi's Resume"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="font-semibold italic mt-6"
+      >
+        Get Latest Resume in PDF
+      </a>
     </div>
   );
 }
