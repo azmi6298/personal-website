@@ -28,6 +28,7 @@
   }
 
   .ti-cursor {
+    @apply text-gray-900 dark:text-gray-100;
     @apply text-[7rem] font-bold;
   }
 
