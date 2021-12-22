@@ -28,7 +28,7 @@ function Header() {
   const menus = ["Home", "About", "Blogs"];
   return (
     <header className="sticky top-0 z-10 min-w-full">
-      <nav className="flex items-center justify-between px-8 lg:px-[6rem] py-4">
+      <nav className="flex items-center justify-between xl:grid xl:grid-cols-3 xl:justify-items-center px-8 lg:px-[6rem] py-4">
         <Link
           className="text-[25px] lg:text-[50px] font-bold cursor-pointer hover:text-violet-600"
           to="home"
@@ -56,7 +56,7 @@ function Header() {
 
         {ThemeChanger()}
       </nav>
-      <div className="xl:hidden flex justify-center py-2 bg-slate-200 dark:bg-[#181418]">
+      <div className="mobile-nav">
         {menus.map((menu, index) => (
           <Link
             key={index}

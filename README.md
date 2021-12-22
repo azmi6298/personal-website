@@ -16,3 +16,7 @@
 
 - Implement Dark Mode
 - Improve SEO
+
+**22-12-2021**
+
+- Minor Update on Header Styling
