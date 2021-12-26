@@ -8,7 +8,7 @@ function Playlist() {
   ];
 
   return (
-    <div className="flex flex-col space-y-10 lg:flex-row lg:min-h-screen justify-between lg:justify-around items-center py-36 lg:py-24 lg:pt-0">
+    <div className="flex flex-col space-y-10 2xl:space-y-0 2xl:flex-row min-h-screen justify-between lg:justify-around items-center pt-36 2xl:pt-0">
       {playlistUrls.map((url, index) => {
         return <SpotifyFrame key={index} playlistUrl={url} />;
       })}

@@ -24,3 +24,4 @@
 **26-12-2021**
 
 - Add new Playlist section
+- Fix responsive UI
