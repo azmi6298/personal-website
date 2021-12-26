@@ -20,3 +20,7 @@
 **22-12-2021**
 
 - Minor Update on Header Styling
+
+**26-12-2021**
+
+- Add new Playlist section

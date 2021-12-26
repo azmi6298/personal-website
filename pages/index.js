@@ -1,6 +1,7 @@
 import Hero from "../components/section/Hero";
 import About from "../components/section/About";
 import Blogs from "../components/section/Blogs";
+import Playlist from "../components/section/Playlist";
 import { Element } from "react-scroll";
 
 function Home({ blogs }) {
@@ -14,6 +15,9 @@ function Home({ blogs }) {
       </Element>
       <Element name="blogs">
         <Blogs blogData={blogs.items} />
+      </Element>
+      <Element name="playlist">
+        <Playlist />
       </Element>
     </div>
   );
