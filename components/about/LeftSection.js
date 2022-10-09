@@ -18,12 +18,12 @@ function LeftSection() {
         </p>
       </div>
       <div className="lg:text-4xl space-y-6">
-        <span>Tech Stack (Current)</span>
+        <span>Tech Stack</span>
         <ul className=" font-semibold space-y-2">
           <li className="hover:text-red-600">Ruby on Rails</li>
-          <li className="hover:text-green-400">Vue | Nuxt</li>
-          <li className="hover:text-blue-300">React | Next</li>
-          <li className="hover:text-blue-400">TailwindCSS</li>
+          <li className="hover:text-green-400">Vue | Nuxt.js</li>
+          <li className="hover:text-blue-300">React | Next.js</li>
+          <li className="hover:text-blue-400">CSS | TailwindCSS</li>
           <li className="hover:text-blue-600">Postgres</li>
         </ul>
       </div>

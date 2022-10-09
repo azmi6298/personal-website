@@ -16,14 +16,14 @@ function Home({ blogs }) {
       <Element name="blogs">
         <Blogs blogData={blogs.items} />
       </Element>
-      <Element name="playlist">
+      {/* <Element name="playlist">
         <Playlist />
-      </Element>
+      </Element> */}
     </div>
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const res = await fetch(
     "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@azmi6298"
   );

@@ -25,8 +25,8 @@ function ThemeChanger() {
 }
 
 function Header() {
-  const menus = ["Home", "About", "Blogs", "Playlist"];
-  const mobileMenus = ["About", "Blogs", "Playlist"];
+  const menus = ["Home", "About", "Blogs"];
+  const mobileMenus = ["About", "Blogs"];
   return (
     <header className="sticky top-0 z-10 min-w-full">
       <nav className="flex items-center justify-between xl:grid xl:grid-cols-3 xl:justify-items-center px-8 lg:px-[6rem] py-4">
@@ -37,7 +37,7 @@ function Header() {
           smooth={true}
           duration={500}
         >
-          im.za
+          Azmi
         </Link>
         <div className="hidden xl:flex justify-center items-center space-x-8 font-semibold text-[25px]">
           {menus.map((menu, index) => (

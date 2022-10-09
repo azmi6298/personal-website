@@ -6,7 +6,7 @@ function Layout({ children }) {
   return (
     <>
       <Head>
-        <title>im.za</title>
+        <title>Muhammad Azmi - Web Developer</title>
       </Head>
       <Header />
       <main>{children}</main>
