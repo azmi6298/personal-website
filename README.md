@@ -4,7 +4,7 @@
 
 > My personal portfolio website built with Next.js and TailwindCSS, hosted on Netlify
 
-> Take a look at https://imzadev.netlify.app
+> Take a look at https://azmi.live
 
 ## Changelog
 
@@ -25,3 +25,7 @@
 
 - Add new Playlist section
 - Fix responsive UI
+
+**09-10-2022**
+- Minor adjust on layout
+- New domain name at [azmi.live](https://azmi.live)!
