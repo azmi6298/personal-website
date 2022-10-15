@@ -44,7 +44,7 @@
   }
 
   .section-title {
-    @apply text-4xl lg:text-[4rem] font-bold underline lg:no-underline mb-4;
+    @apply text-2xl lg:text-[4rem] font-bold underline lg:no-underline mb-4;
   }
 
   .mobile-nav {

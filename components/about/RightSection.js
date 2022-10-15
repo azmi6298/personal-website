@@ -40,7 +40,7 @@ function RightSection() {
   return (
     <div className="flex flex-col min-w-full lg:min-w-min lg:px-0 mt-20 lg:mt-0">
       <hr className="mb-10 border-2 border-gray-900 dark:border-gray-100 lg:hidden" />
-      <p className="text-2xl mb-8 font-semibold underline">Work History</p>
+      <p className="section-title mb-8">Work History</p>
       <div className="flex flex-col">
         {workHistories.map((history, index) => (
           <div

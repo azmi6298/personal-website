@@ -13,7 +13,7 @@ function BlogCard({ data }) {
         href={data.link}
         target="_blank"
         rel="noreferrer"
-        className="text-2xl lg:text-4xl font-semibold hover:text-violet-600"
+        className="text-xl lg:text-4xl font-semibold hover:text-violet-600"
       >
         {data.title}
       </a>

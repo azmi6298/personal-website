@@ -7,14 +7,14 @@ function countAge() {
 function LeftSection() {
   const age = countAge();
   return (
-    <div className="text-2xl lg:text-[3rem] font-light space-y-10 lg:space-y-40">
+    <div className="lg:text-2xl lg:text-[3rem] font-light space-y-10 lg:space-y-40">
       <div className="lg:space-y-10 leading-[3rem]">
         <p>
           {age} y.o. <strong className="font-semibold">Web Developer</strong>
         </p>
         <p>
           Based in{"  "}
-          <strong className="font-semibold  ">Jakarta, Indonesia</strong>
+          <strong className="font-semibold">Jakarta, Indonesia</strong>
         </p>
       </div>
       <div className="lg:text-4xl space-y-6">
