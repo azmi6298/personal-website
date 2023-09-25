@@ -1,10 +1,16 @@
 function RightSection() {
   const workHistories = [
     {
+      title: "Sequis Innovation Lab",
+      link: "https://sequis.co.id/",
+      description: "Frontend Developer (Next.js)",
+      period: "May 2023 - Present",
+    },
+    {
       title: "Ukirama",
       link: "https://ukirama.com/",
       description: "Full Stack Web Dev (RoR) - ERP Software",
-      period: "September 2019 - Present",
+      period: "September 2019 - April 2023",
     },
     {
       title: "RuangUMKM",
