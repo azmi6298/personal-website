@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 function RightSection() {
   const workHistories = [
     {
@@ -63,15 +65,14 @@ function RightSection() {
           </div>
         ))}
       </div>
-      <a
-        href="Resume-Muhammad-Azmi-2024.pdf"
-        alt="Muhammad Azmi's Resume"
+      <Link
+        href="Resume-Muhammad-Azmi-2022.pdf"
         target="_blank"
         rel="noopener noreferrer"
         className="font-semibold italic mt-6"
       >
         Get Latest Resume in PDF
-      </a>
+      </Link>
     </div>
   );
 }

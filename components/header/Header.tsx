@@ -12,14 +12,14 @@ function ThemeChanger() {
   if (!mounted) return null;
   return (
     <div>
-      <a
+      <Link
         className="text-black text-2xl lg:text-4xl cursor-pointer"
         onClick={() => {
           setTheme(theme === "light" ? "dark" : "light");
         }}
       >
         {theme === "light" ? <MdDarkMode /> : <MdLightMode />}
-      </a>
+      </Link>
     </div>
   );
 }
