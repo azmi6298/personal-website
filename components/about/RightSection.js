@@ -64,7 +64,7 @@ function RightSection() {
         ))}
       </div>
       <a
-        href="Resume-Muhammad-Azmi-2022.pdf"
+        href="Resume-Muhammad-Azmi-2024.pdf"
         alt="Muhammad Azmi's Resume"
         target="_blank"
         rel="noopener noreferrer"

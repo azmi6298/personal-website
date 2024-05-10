@@ -1,7 +1,7 @@
-import { differenceInYears } from "date-fns";
+import differenceInCalendarYears from "date-fns/differenceInCalendarYears";
 
 function countAge() {
-  return differenceInYears(new Date(), new Date(1998, 6, 2));
+  return differenceInCalendarYears(new Date(), new Date(1998, 6, 2));
 }
 
 function LeftSection() {
@@ -20,10 +20,10 @@ function LeftSection() {
       <div className="lg:text-4xl space-y-6">
         <span>Tech Stack</span>
         <ul className=" font-semibold space-y-2">
-          <li className="hover:text-red-600">Ruby on Rails</li>
-          <li className="hover:text-green-400">Vue | Nuxt.js</li>
           <li className="hover:text-blue-300">React | Next.js</li>
           <li className="hover:text-blue-400">CSS | TailwindCSS</li>
+          <li className="hover:text-red-600">Ruby on Rails</li>
+          <li className="hover:text-green-400">Vue | Nuxt.js</li>
           <li className="hover:text-blue-600">Postgres</li>
         </ul>
       </div>
