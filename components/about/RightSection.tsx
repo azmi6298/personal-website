@@ -66,7 +66,7 @@ function RightSection() {
         ))}
       </div>
       <Link
-        href="Resume-Muhammad-Azmi-2022.pdf"
+        href="Resume-Muhammad-Azmi-2024.pdf"
         target="_blank"
         rel="noopener noreferrer"
         className="font-semibold italic mt-6"

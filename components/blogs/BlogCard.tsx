@@ -1,5 +1,9 @@
 import Link from "next/link";
 
+interface BlogCardProps {
+  data: Blog;
+}
+
 function formatDate(date) {
   return new Date(date).toLocaleString("en", {
     year: "numeric",
@@ -8,7 +12,7 @@ function formatDate(date) {
   });
 }
 
-function BlogCard({ data }) {
+function BlogCard({ data }: BlogCardProps) {
   return (
     <div className="mb-10">
       <Link
@@ -20,7 +24,7 @@ function BlogCard({ data }) {
         {data.title}
       </Link>
       <p className="text-sm lg:text-2xl grayed-text">
-        {formatDate(data.pubDate)}
+        {formatDate(data.publishedDate)}
       </p>
     </div>
   );

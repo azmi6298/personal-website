@@ -2,9 +2,11 @@ import Link from "next/link";
 import BlogCard from "../blogs/BlogCard";
 import { AiFillMediumSquare } from "react-icons/ai";
 
-function Blogs({ blogData }) {
-  console.log("blog", blogData);
+interface BlogsProps {
+  blogData: Blog[];
+}
 
+function Blogs({ blogData }: BlogsProps) {
   return (
     <div className="flex flex-col xl:flex-row xl:space-x-10 min-h-screen justify-center xl:justify-around items-start lg:items-center pt-36 lg:pt-0">
       <div className="flex flex-col lg:items-center lg:space-y-10">
@@ -21,7 +23,7 @@ function Blogs({ blogData }) {
       <div className="flex flex-col">
         {blogData &&
           blogData.map((blog) => {
-            return <BlogCard key={blog.guid} data={blog} />;
+            return <BlogCard key={blog.id} data={blog} />;
           })}
       </div>
     </div>

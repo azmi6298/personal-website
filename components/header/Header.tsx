@@ -25,8 +25,8 @@ function ThemeChanger() {
 }
 
 function Header() {
-  const menus = ["Home", "About"];
-  const mobileMenus = ["About"];
+  const menus = ["Home", "About", "Blogs"];
+  const mobileMenus = ["About", "Blogs"];
   return (
     <header className="sticky top-0 z-10 min-w-full">
       <nav className="flex items-center justify-between xl:grid xl:grid-cols-3 xl:justify-items-center px-8 lg:px-[6rem] py-4">
