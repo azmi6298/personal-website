@@ -7,11 +7,7 @@ function Hero() {
       <MovingTitle />
       <span className="text-xl lg:text-2xl font-semibold ">
         Web Developer @{" "}
-        <span
-          className="hover:text-violet-600"
-        >
-          Sequis Innovation Lab
-        </span>
+        <span className="hover:text-violet-600">Sequis Innovation Lab</span>
       </span>
       <UserLinks />
     </div>

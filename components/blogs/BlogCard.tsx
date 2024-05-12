@@ -1,15 +1,8 @@
 import Link from "next/link";
+import formatDate from "../../utils/formatDate";
 
 interface BlogCardProps {
   data: Blog;
-}
-
-function formatDate(date) {
-  return new Date(date).toLocaleString("en", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
 }
 
 function BlogCard({ data }: BlogCardProps) {

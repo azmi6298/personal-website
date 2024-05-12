@@ -8,7 +8,7 @@ interface BlogsProps {
 
 function Blogs({ blogData }: BlogsProps) {
   return (
-    <div className="flex flex-col xl:flex-row xl:space-x-10 min-h-screen justify-center xl:justify-around items-start lg:items-center pt-36 lg:pt-0">
+    <div className="flex flex-col xl:flex-row xl:space-x-10 min-h-screen justify-center xl:justify-around items-start lg:items-center">
       <div className="flex flex-col lg:items-center lg:space-y-10">
         <p className="section-title">Blogs</p>
         <Link

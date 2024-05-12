@@ -1,7 +1,7 @@
 import "../styles/globals.css";
 import Layout from "../components/layout/Layout";
 import { ThemeProvider } from "next-themes";
-import * as ga from "../lib/ga";
+import * as ga from "../lib/services/ga";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 

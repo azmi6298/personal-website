@@ -1,30 +1,19 @@
-import differenceInCalendarYears from "date-fns/differenceInCalendarYears";
-
-function countAge() {
-  return differenceInCalendarYears(new Date(), new Date(1998, 6, 2));
-}
+import techStack from "../../utils/static-data/techStack";
 
 function LeftSection() {
-  const age = countAge();
   return (
     <div className="lg:text-2xl lg:text-[3rem] font-light space-y-10 lg:space-y-40">
-      <div className="lg:space-y-10 leading-[3rem]">
-        <p>
-          {age} y.o. <strong className="font-semibold">Web Developer</strong>
-        </p>
-        <p>
-          Based in{"  "}
-          <strong className="font-semibold">Jakarta, Indonesia</strong>
-        </p>
-      </div>
+      <p className="leading-[3rem]">
+        Based in{"  "}
+        <strong className="font-semibold">Jakarta, Indonesia</strong>
+      </p>
+
       <div className="lg:text-4xl space-y-6">
         <span>Tech Stack</span>
         <ul className=" font-semibold space-y-2">
-          <li className="hover:text-blue-300">React | Next.js</li>
-          <li className="hover:text-blue-400">CSS | TailwindCSS</li>
-          <li className="hover:text-red-600">Ruby on Rails</li>
-          <li className="hover:text-green-400">Vue | Nuxt.js</li>
-          <li className="hover:text-blue-600">Postgres</li>
+          {techStack.map((data) => (
+            <li key={data.label}>{data.label}</li>
+          ))}
         </ul>
       </div>
     </div>
