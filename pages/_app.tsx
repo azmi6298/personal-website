@@ -1,9 +1,10 @@
 import "../styles/globals.css";
 import Layout from "../components/layout/Layout";
-import { ThemeProvider } from "next-themes";
+
 import * as ga from "../lib/services/ga";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
+import AppThemeProvider from "../components/provider/AppThemeProvider";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -20,11 +21,11 @@ function MyApp({ Component, pageProps }) {
   }, [router.events]);
 
   return (
-    <ThemeProvider enableSystem={true} attribute="class">
+    <AppThemeProvider>
       <Layout>
         <Component {...pageProps} />
       </Layout>
-    </ThemeProvider>
+    </AppThemeProvider>
   );
 }
 
